@@ -7,8 +7,8 @@ url = ("https://raw.githubusercontent.com/"
 
 path = Path("towns.csv")
 if not path.exists():
-    content = requests.get(url).text
-    path.write_text(content, encoding="utf-8")
+  content = requests.get(url).text
+  path.write_text(content, encoding="utf-8")
 
 file = pd.read_csv("towns.csv")
 print(file.sample(5))
